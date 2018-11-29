@@ -27,17 +27,19 @@ Algorithm overview
 
 Given two input point clouds, and a given rotation axis (e.g., for terrestrial LiDAR scans, the rotation axis is the vertical/z-axis), our algorithm works by:
 
-1. Extracting keypoints for both point clouds, via [ISS](https://ieeexplore.ieee.org/document/5457637)
+1. Extract keypoints for both point clouds, via [ISS](https://ieeexplore.ieee.org/document/5457637).
 
-2. Finding candidate matches between keypoints, via [FPFH](https://ieeexplore.ieee.org/document/5152473)
+2. Find candidate matches between keypoints, via [FPFH](https://ieeexplore.ieee.org/document/5152473).
 
-3. Prune the candidate matches via the proposed Fast Match Pruning (FMP, Algorithm 3 in the paper) algorithm. Besides being able to significantly reduce the input matches, FMP guarantees that **all removed matches are guaranteed to be outliers/incorrect matches**, so that the global optimal solution remains the same before and after FMP.
+3. Prune the candidate matches via the proposed Fast Match Pruning (FMP, Algorithm 3 in the paper) algorithm. Besides being able to significantly reduce the input matches, FMP guarantees that **all removed matches are guaranteed to be outliers/ incorrect matches**, so that the global optimal solution remains the same before and after FMP.
 
-4. Finding the global optimal 4DOF pose via an efficient Branch-and-Bound (BnB, Algorithm 2 in the paper). The BnB works on the 3D translation space, which exhaustively searches for the best translation. And a **global optimal** and **polynomial time** 1D rotation search algorithm is embedded inside the translation BnB to search for the best rotation given translation. This polynomial time rotation search algorithm is the key to make our BnB algorithm efficient.
+4. Find the global optimal 4DOF pose by Branch-and-Bound (BnB, Algorithm 2 in the paper). The BnB works on the 3D translation space, which exhaustively searches for the best translation. A **global optimal** and **polynomial time** 1D rotation search algorithm is embedded inside the translation BnB to search for the best rotation given translation. This highly efficient rotation search algorithm makes our BnB very practical and have comparable/ faster speed to prevalent local methods.
 
 The main contribution of this paper lies in step 3 and 4, step 1 and 2 are implemented using [PCL](http://pointclouds.org/) and can be replaced by other methods.
 
 Please refer to the paper for more details.
 
+Compile
+=======
 
 
