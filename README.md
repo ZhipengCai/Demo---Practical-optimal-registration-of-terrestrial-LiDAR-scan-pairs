@@ -1,5 +1,7 @@
 # Demo---Practical-optimal-registration-of-terrestrial-LiDAR-scan-pairs
 
+About
+=====
 Efficient 4DOF (3DOF translation + 1D rotation angle, with known rotation axis) point cloud registration with guaranteed global optimality. 
 
 [[Paper](https://www.sciencedirect.com/science/article/pii/S0924271618303125?via%3Dihub)] 
@@ -47,7 +49,65 @@ Step 1 is achieved by first extracting [ISS](https://ieeexplore.ieee.org/documen
 
 Please refer to the [paper](https://www.sciencedirect.com/science/article/pii/S0924271618303125?via%3Dihub) for more details.
 
-Compile
-=======
+Getting Started
+===============
+The demo has been tested on Linux (Ubuntu 14.04 LTS 64-bit). All methods reported in the experiments are included.
 
+-------------
+Pre-requisite
+-------------
+1. [CMake](https://cmake.org/) 2.8 or above.
+
+2. [PCL](http://pointclouds.org/) 1.8 or above.
+
+3. [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page) 3.2 or above.
+
+4. [Cblas](http://www.netlib.org/blas/). There are also other implementations of Cblas, all should work.
+
+5. (Optional) [Super4PCS library](http://nmellado.github.io/Super4PCS/a05034.html). Only for enabling the Super4PCS in the demo. If you don't want to test it, just ignore this item.
+
+-------
+Compile
+-------
+1. Clone this repository.
+
+2. Open the command window and enter the root directory of this repository.
+
+3. Type "mkdir build && cd build && cmake .. && make"
+
+4. Run the program using the command:
+
+"./4DOFReg ../data/arch/s01.ply (path to the source point cloud) ../data/arch/s02.ply (path to the target point cloud) ../data/bunny/result1-2.txt (path to the output file, need to mkdir if the folder does not exist) 0.1 (inlier threshold, any value between 0.05 to 0.2 should be fine for the reported real-world datasets) 10 (k in the paper, just set to 10 to reproduce the same result in the paper) 1 (the method u want to run)"
+
+Corresponding ID for each method
+================================
+
+1. FMP+BnB
+
+2. BnB
+
+3. RANSAC
+
+4. LM
+
+5. GTA
+
+6. K4PCS
+
+7. S4PCS (currently not used)
+
+To enable S4PCS (i.e. Super4PCS), after installing its library, you need to uncomment the corresponding part in "CMakeLists.txt" and "main.cpp" and recompile.
+
++ The part to uncomment in "CMakeLists.txt" file:
+
+```
+## Find super4pcs(used after installing super4pcs), install super4pcs library and uncomment if you want to use it.
+##set this to the cmake sub-folder of your S4PCS installation dir. And change the filename of "Super4PCSConfig.cmake" to "FindSuper4PCS.cmake"
+#list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/S4PCS/Super4PCS/build/install/lib/cmake")
+#find_package(Super4PCS REQUIRED)
+#include_directories(${Super4PCS_INCLUDE_DIR})
+#link_directories(${Super4PCS_LIB_DIR})
+#target_link_libraries(${PROJECT_NAME} ${Super4PCS_LIBRARIES})
+```
+  
 
