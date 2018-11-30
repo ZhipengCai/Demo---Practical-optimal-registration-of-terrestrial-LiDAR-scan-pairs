@@ -115,7 +115,7 @@ To enable S4PCS (i.e. Super4PCS), after installing its library, you need to unco
 #target_link_libraries(${PROJECT_NAME} ${Super4PCS_LIBRARIES})
 ```
   
-+ The part to uncomment in "main.cpp" file:
++ The part to uncomment in "main.cpp" file (**remember to reset the link to the Super4PCS library in your computer**):
 ```
 //!uncomment if you have installed and want to use S4PCS (please reset to the directory of the installed library in your computer)
 //#include "../S4PCS/Super4PCS/build/install/include/pcl/registration/super4pcs.h"
