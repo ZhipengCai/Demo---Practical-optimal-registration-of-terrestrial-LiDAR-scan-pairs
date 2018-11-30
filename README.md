@@ -119,7 +119,7 @@ To enable S4PCS (i.e. Super4PCS), after installing its library, you need to unco
 ```
 //!uncomment if you have installed and want to use S4PCS (please reset to the directory of the installed library in your computer)
 //#include "../S4PCS/Super4PCS/build/install/include/pcl/registration/super4pcs.h"
-``
+```
 and
  
 ```
