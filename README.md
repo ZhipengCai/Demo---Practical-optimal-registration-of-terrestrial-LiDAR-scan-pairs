@@ -27,15 +27,15 @@ Algorithm overview
 
 Given two input point clouds, and a given rotation axis (e.g., for terrestrial LiDAR scans, the rotation axis is the vertical/z-axis), our algorithm works by:
 
-1. Extract keypoints for both point clouds, via [ISS](https://ieeexplore.ieee.org/document/5457637).
+1. Compute candidate matches between two point clouds.
 
-2. Find candidate matches between keypoints, via [FPFH](https://ieeexplore.ieee.org/document/5152473).
+2. Prune the candidate matches via the proposed Fast Match Pruning (FMP, Algorithm 3 in the paper) algorithm. Besides being able to significantly reduce the input matches, FMP guarantees that **all removed matches are guaranteed to be outliers/ incorrect matches**, so that the global optimal solution remains the same before and after FMP.
 
-3. Prune the candidate matches via the proposed Fast Match Pruning (FMP, Algorithm 3 in the paper) algorithm. Besides being able to significantly reduce the input matches, FMP guarantees that **all removed matches are guaranteed to be outliers/ incorrect matches**, so that the global optimal solution remains the same before and after FMP.
+3. Find the global optimal 4DOF pose by Branch-and-Bound (BnB, Algorithm 2 in the paper). The BnB works on the 3D translation space, which exhaustively searches for the best translation. A **global optimal** and **polynomial time** 1D rotation search algorithm is embedded inside the translation BnB to search for the best rotation given translation. This highly efficient rotation search algorithm makes our BnB very practical and have comparable/ faster speed to prevalent local methods.
 
-4. Find the global optimal 4DOF pose by Branch-and-Bound (BnB, Algorithm 2 in the paper). The BnB works on the 3D translation space, which exhaustively searches for the best translation. A **global optimal** and **polynomial time** 1D rotation search algorithm is embedded inside the translation BnB to search for the best rotation given translation. This highly efficient rotation search algorithm makes our BnB very practical and have comparable/ faster speed to prevalent local methods.
-
-The main contribution of this paper lies in step 3 and 4, step 1 and 2 are implemented using [PCL](http://pointclouds.org/) and can be replaced by other methods.
+The main contribution of this paper is in step 2 and 3.
+ 
+Step 1 is achieved by first extracting [ISS](https://ieeexplore.ieee.org/document/5457637) keypoints between two point clouds, and then computing matches between the keypoints via [FPFH](https://ieeexplore.ieee.org/document/5152473). We use the implementation from [PCL](http://pointclouds.org/) for ISS and FPFH.
 
 Please refer to the paper for more details.
 
