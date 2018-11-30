@@ -56,11 +56,11 @@ The demo has been tested on Linux (Ubuntu 14.04 LTS 64-bit). All methods reporte
 -------------
 Pre-requisite
 -------------
-1. [CMake](https://cmake.org/) 2.8 or above.
+1. [CMake](https://cmake.org/) version 2.8 or above.
 
-2. [PCL](http://pointclouds.org/) 1.8 or above.
+2. [PCL](http://pointclouds.org/) version 1.8 or above.
 
-3. [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page) 3.2 or above.
+3. [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page) version 3.2 or above.
 
 4. [Cblas](http://www.netlib.org/blas/). There are also other implementations of Cblas, all should work.
 
