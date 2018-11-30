@@ -8,6 +8,8 @@ Efficient 4DOF (3DOF translation + 1D rotation angle, with known rotation axis) 
 
 [[Video demo](https://www.youtube.com/watch?v=MKzSN4bbs1o&feature=youtu.be)]
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MKzSN4bbs1o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 The demo is free for non-commercial academic use. Any commercial use is strictly 
 prohibited without the authors' consent. Please acknowledge the authors by citing:
 
