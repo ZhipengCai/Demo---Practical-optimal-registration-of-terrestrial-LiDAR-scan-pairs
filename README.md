@@ -71,7 +71,7 @@ Compile
 -------
 1. Clone this repository.
 
-2. Open the command window and enter the root directory of this repository.
+2. Open the terminal and enter the root directory of this repository.
 
 3. Type "mkdir build && cd build && cmake .. && make"
 
