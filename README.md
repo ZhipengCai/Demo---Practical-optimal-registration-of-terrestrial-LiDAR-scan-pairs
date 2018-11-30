@@ -77,11 +77,11 @@ Compile
 
 4. Run the program using the command:
 
-"./4DOFReg ../data/arch/s01.ply ../data/arch/s02.ply ../data/bunny/result1-2.txt 0.1 10 1"
+"./4DOFReg ../data/arch/s01.pcd ../data/arch/s02.pcd ../data/result1-2.txt 0.1 1"
 
 + Command explanation:
 
-"./4DOFReg ../data/arch/s01.ply (path to the source point cloud) ../data/arch/s02.ply (path to the target point cloud) ../data/bunny/result1-2.txt (path to the output file, need to mkdir if the folder does not exist) 0.1 (inlier threshold, any value between 0.05 to 0.2 should be fine for the reported real-world datasets) 10 (k in the paper, just set to 10 to reproduce the same result in the paper) 1 (the method u want to run)"
+"./4DOFReg ../data/arch/s01.ply (path to the source point cloud) ../data/arch/s02.ply (path to the target point cloud) ../data/bunny/result1-2.txt (path to the output file, need to mkdir if the folder does not exist) 0.1 (inlier threshold, any value between 0.05 to 0.2 should be fine for the reported real-world datasets) 1 (the method u want to run)"
 
 --------------------------------
 Corresponding ID for each method
@@ -99,7 +99,11 @@ Corresponding ID for each method
 
 6. K4PCS
 
-7. S4PCS (currently not used)
+7. S4PCS (i.e., Super4PCS). Disabled by default, see below for how to enable.
+
+--------------------------------
+Enable Super4PCS
+--------------------------------
 
 To enable S4PCS (i.e. Super4PCS), after installing its library, you need to uncomment the corresponding code in "./CMakeLists.txt" and "./src/main.cpp" and recompile, as follows.
 
@@ -142,3 +146,4 @@ and
 //        }
 //    }
 ```
+

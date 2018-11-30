@@ -1,0 +1,15 @@
+#include <iostream>
+#include <pcl/point_types.h>
+#include <pcl/search/pcl_search.h>
+#include <pcl/keypoints/iss_3d.h>
+
+using namespace std;
+
+namespace GenIn{
+
+void VGF(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr cloudVG,
+	 double inlTh);
+
+void ISSExt(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr ISS, 
+            pcl::PointIndicesPtr ISSIdx, double inlTh);
+}
