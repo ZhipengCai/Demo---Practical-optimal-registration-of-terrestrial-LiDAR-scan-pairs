@@ -83,8 +83,9 @@ Compile
 
 "./4DOFReg ../data/arch/s01.ply (path to the source point cloud) ../data/arch/s02.ply (path to the target point cloud) ../data/bunny/result1-2.txt (path to the output file, need to mkdir if the folder does not exist) 0.1 (inlier threshold, any value between 0.05 to 0.2 should be fine for the reported real-world datasets) 10 (k in the paper, just set to 10 to reproduce the same result in the paper) 1 (the method u want to run)"
 
+--------------------------------
 Corresponding ID for each method
-================================
+--------------------------------
 
 1. FMP+BnB
 
@@ -100,7 +101,7 @@ Corresponding ID for each method
 
 7. S4PCS (currently not used)
 
-To enable S4PCS (i.e. Super4PCS), after installing its library, you need to uncomment the corresponding code in "CMakeLists.txt" and "main.cpp" and recompile, as follows.
+To enable S4PCS (i.e. Super4PCS), after installing its library, you need to uncomment the corresponding code in "./CMakeLists.txt" and "./src/main.cpp" and recompile, as follows.
 
 + The part to uncomment (Just remove one "#" sign for each line) in "CMakeLists.txt" file:
 
@@ -116,6 +117,28 @@ To enable S4PCS (i.e. Super4PCS), after installing its library, you need to unco
   
 + The part to uncomment in "main.cpp" file:
 ```
-
+//!uncomment if you have installed and want to use S4PCS (please reset to the directory of the installed library in your computer)
+//#include "../S4PCS/Super4PCS/build/install/include/pcl/registration/super4pcs.h"
+``
+and
+ 
 ```
-
+//!uncomment if you have installed and want to use S4PCS
+//    else if(testMethod == 7){
+//        cout<<"running S4PCS..."<<endl;
+//        pcl::Super4PCS<pcl::PointXYZ, pcl::PointXYZ> s4pcs;
+//        pcl::PointCloud<pcl::PointXYZ> final;
+//        s4pcs.setInputSource(issS);
+//        s4pcs.setInputTarget(issT);
+//        s4pcs.options_.delta =  inlTh;
+//        s4pcs.options_.configureOverlap(0.5);
+//        //register
+//        s4pcs.align(final);
+//        Eigen::Matrix<float, 4,4> a = s4pcs.getFinalTransformation();
+//        for(size_t i=0;i<4;i++){
+//            for(size_t j=0;j<4;j++){
+//                result.x[i+j*4] = (double)a(i,j);
+//            }
+//        }
+//    }
+```
