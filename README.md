@@ -22,6 +22,8 @@ prohibited without the authors' consent. Please acknowledge the authors by citin
 ```
 in any academic publications that have made use of this package or part of it.
 
+Do not hesitate to contact ([[homepage](https://zhipengcai.github.io/)] email: zhipeng.cai@adelaide.edu.au) the authors if you have any question or find any bugs.
+
 Algorithm overview
 ==================
 
@@ -37,7 +39,7 @@ The main contribution of this paper is in step 2 and 3.
  
 Step 1 is achieved by first extracting [ISS](https://ieeexplore.ieee.org/document/5457637) keypoints between two point clouds, and then computing matches between the keypoints via [FPFH](https://ieeexplore.ieee.org/document/5152473). We use the implementation from [PCL](http://pointclouds.org/) for ISS and FPFH.
 
-Please refer to the paper for more details.
+Please refer to the [paper](https://www.sciencedirect.com/science/article/pii/S0924271618303125?via%3Dihub) for more details.
 
 Compile
 =======
