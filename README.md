@@ -93,13 +93,13 @@ Corresponding ID for each method
 
 3. RANSAC
 
-4. LM
+4. [LM](http://vladlen.info/papers/fast-global-registration.pdf)
 
-5. GTA
+5. [GTA](http://www.dsi.unive.it/~rodola/cvpr2010.pdf)
 
-6. K4PCS
+6. [K4PCS](https://www.ethz.ch/content/dam/ethz/special-interest/baug/igp/photogrammetry-remote-sensing-dam/documents/pdf/thei_weg_schind_IJPRS2013.pdf)
 
-7. S4PCS (i.e., Super4PCS). Disabled by default, see below for how to enable.
+7. [S4PCS](http://geometry.cs.ucl.ac.uk/projects/2014/super4PCS/super4pcs_low.pdf) (i.e., Super4PCS). Disabled by default, see below for how to enable.
 
 --------------------------------
 Enable Super4PCS
