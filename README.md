@@ -22,7 +22,12 @@ prohibited without the authors' consent. Please acknowledge the authors by citin
 ```
 in any academic publications that have made use of this package or part of it.
 
-Do not hesitate to contact ([[homepage](https://zhipengcai.github.io/)] email: zhipeng.cai@adelaide.edu.au) the authors if you have any question or find any bugs.
+Contact
+=======
+Homepage:[https://zhipengcai.github.io/](https://zhipengcai.github.io/) 
+Email: zhipeng.cai@adelaide.edu.au
+
+Do not hesitate to contact the authors if you have any question or find any bugs.
 
 Algorithm overview
 ==================
