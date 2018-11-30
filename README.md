@@ -81,7 +81,7 @@ Compile
 
 + Command explanation:
 
-"./4DOFReg ../data/arch/s01.ply (path to the source point cloud) ../data/arch/s02.ply (path to the target point cloud) ../data/bunny/result1-2.txt (path to the output file, need to mkdir if the folder does not exist) 0.1 (inlier threshold, any value between 0.05 to 0.2 should be fine for the reported real-world datasets) 1 (the method u want to run)"
+"./4DOFReg ../data/arch/s01.pcd (path to the source point cloud, **the point cloud file can be formatted in ".ply/.pcd"**) ../data/arch/s02.pcd (path to the target point cloud) ../data/result1-2.txt (path to the output file, need to mkdir if the folder does not exist) 0.1 (inlier threshold, any value between 0.05 to 0.2 should be fine for the reported real-world datasets) 1 (the method u want to run)"
 
 --------------------------------
 Corresponding ID for each method
