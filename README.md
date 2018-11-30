@@ -25,9 +25,10 @@ in any academic publications that have made use of this package or part of it.
 Contact
 =======
 Homepage:[https://zhipengcai.github.io/](https://zhipengcai.github.io/) 
+
 Email: zhipeng.cai@adelaide.edu.au
 
-Do not hesitate to contact the authors if you have any question or find any bugs.
+Do not hesitate to contact the authors if you have any question or find any bugs :)
 
 Algorithm overview
 ==================
