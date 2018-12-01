@@ -51,7 +51,7 @@ Please refer to the [paper](https://www.sciencedirect.com/science/article/pii/S0
 
 Getting Started
 ===============
-The demo has been tested on Linux (Ubuntu 14.04 LTS 64-bit). All methods reported in the experiments are included.
+The demo has been tested on Linux (Ubuntu 14.04 LTS 64-bit). All methods reported in the experiments are included and are implemented in C++.
 
 -------------
 Pre-requisite
