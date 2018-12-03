@@ -4,6 +4,8 @@ About
 =====
 Efficient 4DOF (3DOF translation + 1D rotation angle, with known rotation axis) point cloud registration with guaranteed global optimality. 
 
+![alt text](https://github.com/ZhipengCai/ZhipengCai.github.io/blob/master/papers/ISPRSJ18.jpg " ")
+
 [[Paper](https://www.sciencedirect.com/science/article/pii/S0924271618303125?via%3Dihub)] 
 
 [[Video demo](https://www.youtube.com/watch?v=MKzSN4bbs1o&feature=youtu.be)]
