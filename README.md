@@ -6,9 +6,7 @@ Efficient 4DOF (3DOF translation + 1D rotation angle, with known rotation axis) 
 
 ![alt text](https://github.com/ZhipengCai/ZhipengCai.github.io/blob/master/papers/ISPRSJ18.jpg " ")
 
-[[Paper](https://www.sciencedirect.com/science/article/pii/S0924271618303125?via%3Dihub)] 
-
-[[Video demo](https://www.youtube.com/watch?v=MKzSN4bbs1o&feature=youtu.be)]
+[[Paper](https://www.sciencedirect.com/science/article/pii/S0924271618303125?via%3Dihub)] [[Video demo](https://www.youtube.com/watch?v=MKzSN4bbs1o&feature=youtu.be)]
 
 The demo is free for non-commercial academic use. Any commercial use is strictly 
 prohibited without the authors' consent. Please acknowledge the authors by citing:
